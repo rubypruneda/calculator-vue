@@ -17,7 +17,7 @@
             <div class = 'button'>5</div>    
             <div class = 'button'>6</div>    
             <div class = 'button orange'>-</div>    
-            <div class = 'button'>1</div>    
+            <div v-on:click="one" class = 'button'>1</div>    
             <div class = 'button'>2</div>    
             <div class = 'button'>3</div>    
             <div class = 'button orange'>+</div>    
@@ -38,6 +38,9 @@
         methods: {
             clear () {
                 this.now = '';
+            },
+            one () {
+                this.now = 1;
             }
         }
     }
