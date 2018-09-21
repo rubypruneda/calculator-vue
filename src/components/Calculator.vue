@@ -9,17 +9,17 @@
             <div class = 'button'>+/-</div>    
             <div class = 'button'>%</div>    
             <div class = 'button orange'>÷</div>    
-            <div v-on:click="seven" class = 'button'>7</div>    
-            <div v-on:click="eight" class = 'button'>8</div>    
-            <div v-on:click="nine" class = 'button'>9</div>    
+            <div v-on:click="number('7')" class = 'button'>7</div>    
+            <div v-on:click="number('8')" class = 'button'>8</div>    
+            <div v-on:click="number('9')" class = 'button'>9</div>    
             <div class = 'button orange'>*</div>    
-            <div v-on:click="four" class = 'button'>4</div>    
-            <div v-on:click="five" class = 'button'>5</div>    
-            <div v-on:click="six" class = 'button'>6</div>    
+            <div v-on:click="number('4')" class = 'button'>4</div>    
+            <div v-on:click="number('5')" class = 'button'>5</div>    
+            <div v-on:click="number('6')" class = 'button'>6</div>    
             <div class = 'button orange'>-</div>    
-            <div v-on:click="one" class = 'button'>1</div>    
-            <div v-on:click="two" class = 'button'>2</div>    
-            <div v-on:click="three" class = 'button'>3</div>    
+            <div v-on:click="number('1')" class = 'button'>1</div>    
+            <div v-on:click="number('2')" class = 'button'>2</div>    
+            <div v-on:click="number('3')" class = 'button'>3</div>    
             <div class = 'button orange'>+</div>    
             <div v-on:click="zero" class = 'button zero'>0</div>    
             <div class = 'button'>.</div>    
@@ -39,39 +39,13 @@
             clear () {
                 this.now = '';
             },
+            number(num) {
+                this.now = this.now + num;
+            },
             zero () {
-                if(this.now = ''){
-                    this.now != this.now + 0;
-                } else {
+                if(this.now != 0){
                     this.now = this.now + 0;
-                }
-            },
-            one () {
-                this.now = this.now + 1;
-            },
-            two () {
-                this.now = this.now + 2;
-            },
-            three () {
-                this.now = this.now + 3;
-            },
-            four () {
-                this.now = this.now + 4;
-            },
-            five () {
-                this.now = this.now + 5;
-            },
-            six () {
-                this.now = this.now + 6;
-            },
-            seven () {
-                this.now = this.now + 7;
-            },
-            eight () {
-                this.now = this.now + 8;
-            },
-            nine () {
-                this.now = this.now + 9;
+                } 
             }
         }
     }
