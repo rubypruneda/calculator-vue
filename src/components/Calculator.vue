@@ -4,7 +4,7 @@
             is it working?
         </p>
         <div class = 'calculator'>  
-            <div class = 'display' style = 'border-radius: 10px 10px'>{{now || 0}}</div>
+            <div class = 'display' style = 'border-radius: 10px 10px 0 0'>{{now || 0}}</div>
             <div v-on:click="clear" class = 'button'>AC</div>    
             <div class = 'button'>+/-</div>    
             <div class = 'button'>%</div>    
