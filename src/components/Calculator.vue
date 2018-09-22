@@ -14,7 +14,7 @@
             <div v-on:click="number('9')" class = 'button'>9</div>    
             <div class = 'button orange'>*</div>    
             <div v-on:click="number('4')" class = 'button'>4</div>    
-            <div v-on:click="number('5')" class = 'button'>5</div>    
+            <div v-on:click="number(5)" class = 'button'>5</div>    
             <div v-on:click="number('6')" class = 'button'>6</div>    
             <div class = 'button orange'>-</div>    
             <div v-on:click="number('1')" class = 'button'>1</div>    
@@ -60,7 +60,7 @@
                 console.log(this.hold)
             },
             equal() {
-               this.now = this.now + this.hold;
+               this.now = +this.now + +this.hold;
                 console.log(this.now)
             }
         }
