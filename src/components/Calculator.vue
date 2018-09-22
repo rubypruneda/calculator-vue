@@ -22,7 +22,7 @@
             <div v-on:click="number('3')" class = 'button'>3</div>    
             <div class = 'button orange'>+</div>    
             <div v-on:click="zero" class = 'button zero'>0</div>    
-            <div class = 'button'>.</div>    
+            <div v-on:click="dot" class = 'button'>.</div>    
             <div class = 'button orange' style = 'border-radius: 0 0 10px'>=</div>    
         </div>
     </div>
@@ -40,12 +40,21 @@
                 this.now = '';
             },
             number(num) {
-                this.now = this.now + num;
+                this.now = `${this.now}${num}`;
             },
             zero () {
                 if(this.now != 0){
                     this.now = this.now + 0;
                 } 
+            },
+            dot() {
+                if(this.now.indexOf('.') === -1) {
+                    this.number('.');
+                }
+            }
+            ,
+            add() {
+                this.now + this.now;
             }
         }
     }
