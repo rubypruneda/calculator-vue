@@ -34,7 +34,8 @@
         data() {
             return {
                 now: '',
-                hold: ''
+                hold: '',
+                operator: null
             }
         },
         methods: {
@@ -55,9 +56,12 @@
                 }
             },
             add() {
+                // this.hold = this.now;
+                // this.now = '';
+                // console.log(this.hold)
+                this.operator = (a, b) => a + b;
                 this.hold = this.now;
-                this.now = '';
-                console.log(this.hold)
+
             },
             equal() {
                this.now = +this.now + +this.hold;
