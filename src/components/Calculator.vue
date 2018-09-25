@@ -1,7 +1,7 @@
 <template>
     <div class = 'center'>
         <div class = 'calculator'>  
-            <div class = 'display' style = 'border-radius: 10px 10px 0 0'>{{now || 0}}</div>
+            <div class = 'display' style = 'border-radius: 10px 10px 0 0'><div class = 'circle'></div><div class = 'circle'></div><div class = 'circle'></div>{{now || 0}}</div>
             <div v-on:click="clear" class = 'button'>AC</div>    
             <div class = 'button'>+/-</div>    
             <div class = 'button'>%</div>    
@@ -88,6 +88,16 @@
         padding-top: 15%;
     }
 
+    .circle {
+        height: 15px;
+        width: 15px;
+        margin-left: 8px; 
+        margin-top: 4px;
+        border-radius: 50%;
+        background-color: green;
+        float: left;
+    }
+
     .calculator {
        display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -103,6 +113,8 @@
     .display { 
         grid-column: 1/5;
         background-color: lightblue;
+        font-size: 30px;
+        padding-right: 40px;
     }
 
     .zero {
