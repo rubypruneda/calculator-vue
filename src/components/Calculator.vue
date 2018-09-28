@@ -1,7 +1,7 @@
 <template>
     <div class = 'center'>
         <div class = 'calculator'>  
-            <div class = 'display' style = 'border-radius: 10px 10px 0 0'><div class = 'circle'></div><div class = 'circle'></div><div class = 'circle'></div>{{now || 0}}</div>
+            <div class = 'display' style = 'border-radius: 10px 10px 0 0'><div class = 'circle' style = 'background-color: red'></div><div class = 'circle' style = 'background-color: yellow'></div><div class = 'circle'></div>{{now || 0}}</div>
             <div v-on:click="clear" class = 'button'>AC</div>    
             <div class = 'button'>+/-</div>    
             <div class = 'button'>%</div>    
