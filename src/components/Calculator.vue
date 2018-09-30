@@ -57,6 +57,9 @@
                     this.number('.');
                 }
             },
+            percent() {
+                
+            },
             add() {
                 // this.hold = this.now;
                 // this.now = '';
@@ -91,6 +94,7 @@
     .now {
        color: white;
        float: right;
+
     }
 
     .center {
