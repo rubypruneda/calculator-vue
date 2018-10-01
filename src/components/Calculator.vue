@@ -8,7 +8,7 @@
             </div>
             <div v-on:click="clear" class = 'button'>AC</div>    
             <div class = 'button'>+/-</div>    
-            <div class = 'button'>%</div>    
+            <div v-on:click="percent" class = 'button'>%</div>    
             <div class = 'button orange'>÷</div>    
             <div v-on:click="number('7')" class = 'button'>7</div>    
             <div v-on:click="number('8')" class = 'button'>8</div>    
@@ -58,7 +58,7 @@
                 }
             },
             percent() {
-                
+                this.now = (+this.now) / 100 * 10;
             },
             add() {
                 // this.hold = this.now;
