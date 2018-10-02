@@ -56,6 +56,8 @@
                 if(this.now.indexOf('.') === -1) {
                     this.number('.');
                 }
+            }, sign() {
+
             },
             percent() {
                 this.now = (+this.now) / 100 * 10;
