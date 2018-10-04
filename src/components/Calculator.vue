@@ -60,7 +60,8 @@
 
             },
             percent() {
-                this.now = (+this.now) / 100 * 10;
+                // this.now = (+this.now) / 100 * 10;
+                 this.current = `${parseFloat(this.current) / 100}`
             },
             add() {
                 // this.hold = this.now;
