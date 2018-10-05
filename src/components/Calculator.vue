@@ -7,7 +7,7 @@
             </div>
             </div>
             <div v-on:click="clear" class = 'button'>AC</div>    
-            <div class = 'button'>+/-</div>    
+            <div v-on:click="sign" class = 'button'>+/-</div>    
             <div v-on:click="percent" class = 'button'>%</div>    
             <div class = 'button orange'>÷</div>    
             <div v-on:click="number('7')" class = 'button'>7</div>    
@@ -57,7 +57,11 @@
                     this.number('.');
                 }
             }, sign() {
-
+        //          this.now = this.now.charAt(0) === '-' ? 
+        // this.now.slice(1) : `-${this.now}`;
+                    if(this.now = this.now.charAt(0) === '-' ){
+                    this.now.slice(1) : `-${this.now}`;
+                    }
             },
             percent() {
                 // this.now = (+this.now) / 100 * 10;
