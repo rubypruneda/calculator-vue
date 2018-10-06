@@ -58,10 +58,12 @@
                 }
             }, sign() {
         //          this.now = this.now.charAt(0) === '-' ? 
-        // this.now.slice(1) : `-${this.now}`;
+        //          this.now.slice(1) : `-${this.now}`;
                     if(this.now = this.now.charAt(0) === '-' ){
-                    this.now.slice(1) : `-${this.now}`;
-                    }
+                        this.now.slice(1)
+                    } 
+                     `-${this.now}`;
+                    
             },
             percent() {
                 // this.now = (+this.now) / 100 * 10;
