@@ -57,17 +57,17 @@
                     this.number('.');
                 }
             }, sign() {
-        //          this.now = this.now.charAt(0) === '-' ? 
-        //          this.now.slice(1) : `-${this.now}`;
-                    if(this.now = this.now.charAt(0) === '-' ){
-                        this.now.slice(1)
-                    } 
-                     `-${this.now}`;
+                 this.now = this.now.charAt(0) === '-' ? 
+                 this.now.slice(1) : `-${this.now}`;
+                    // if(this.now = this.now.charAt(0) === '-' ){
+                    //     this.now.slice(1)
+                    // } 
+                    //  `-${this.now}`;
                     
             },
             percent() {
                 // this.now = (+this.now) / 100 * 10;
-                 this.current = `${parseFloat(this.current) / 100}`
+                 this.now = `${parseFloat(this.now) / 100}`
             },
             add() {
                 // this.hold = this.now;
